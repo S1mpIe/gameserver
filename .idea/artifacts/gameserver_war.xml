@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="gameserver-0.0.1-SNAPSHOT.war">
+    <root id="archive" name="gameserver.war">
       <element id="artifact" artifact-name="gameserver:war exploded" />
     </root>
   </artifact>

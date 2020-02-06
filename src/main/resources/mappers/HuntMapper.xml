@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.s1mpie.gameserver.repostiory.HuntMapper">
+    <resultMap id="Hunt" type="Hunt" autoMapping="true">
+    </resultMap>
+    <select id="getLastActiveTime" parameterType="String" resultMap="Hunt">
+        select * from hunt
+        where user_id=#{userId} and status='正在捕捞'
+        order by begin_time;
+    </select>
+    <select id="getLastTime" parameterType="String" resultMap="Hunt">
+        select * from hunt
+        where user_id=#{userId}
+        order by begin_time;
+    </select>
+    <insert id="startShip">
+        insert into hunt(hunt_id, user_id,begin_time,status)
+        values (#{huntId},#{userId},#{beginTime},'正在捕捞')
+    </insert>
+    <update id="stopShip">
+        update hunt set status='结束'
+        where user_id=#{userId} and hunt_id=#{huntId}
+    </update>
+</mapper>
