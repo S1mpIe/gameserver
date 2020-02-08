@@ -5,4 +5,7 @@
     <select id="queryCurrent" resultMap="Powers" parameterType="String">
         select * from powers where user_id=#{userId}
     </select>
+    <update id="updateCurrent" >
+        update powers set current=#{power} where user_id=#{userId}
+    </update>
 </mapper>

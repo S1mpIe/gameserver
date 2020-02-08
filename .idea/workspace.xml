@@ -6,9 +6,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gameserver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gameserver.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/GameserverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/GameserverApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/ServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/controller/CoordinateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/controller/CoordinateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/controller/InitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/model/Coordinate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/model/Coordinate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/repostiory/CoordinateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/repostiory/CoordinateMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/repostiory/PowerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/repostiory/PowerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/CoordinateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/CoordinateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/CoordinateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/CoordinateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CoordinateMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CoordinateMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PowerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PowerMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -117,6 +124,9 @@
       </list>
     </option>
   </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -133,7 +143,9 @@
       <workItem from="1579432117381" duration="8648000" />
       <workItem from="1579442505242" duration="1050000" />
       <workItem from="1580888046451" duration="5780000" />
-      <workItem from="1580968437698" duration="3219000" />
+      <workItem from="1580968437698" duration="14457000" />
+      <workItem from="1581088175682" duration="815000" />
+      <workItem from="1581141815225" duration="7508000" />
     </task>
     <task id="LOCAL-00001" summary="Init...">
       <created>1575365296826</created>
@@ -149,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575365448687</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Init...">
+      <created>1580971870476</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580971870476</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,58 +183,58 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579434636333" />
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1580970058384">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1580988429065">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580970058384" />
-    <state x="583" y="436" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1579432394842">
+    <state x="765" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1580988429065" />
+    <state x="583" y="436" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1580974658611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="583" y="436" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579432394842" />
+    <state x="583" y="436" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580974658611" />
     <state x="306" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1579440036890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="306" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579440036890" />
-    <state x="566" y="22" key="CommitChangelistDialog2" timestamp="1580971792478">
+    <state x="566" y="22" key="CommitChangelistDialog2" timestamp="1580971868338">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="566" y="22" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580971792478" />
+    <state x="566" y="22" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580971868338" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1579442887856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579442887856" />
-    <state width="1877" height="-12" key="GridCell.Tab.0.bottom" timestamp="1580971793121">
+    <state width="1877" height="128" key="GridCell.Tab.0.bottom" timestamp="1581149016712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="-12" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580971793121" />
-    <state width="1877" height="-12" key="GridCell.Tab.0.center" timestamp="1580971793121">
+    <state width="1877" height="128" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581149016712" />
+    <state width="1877" height="128" key="GridCell.Tab.0.center" timestamp="1581149016712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="-12" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580971793121" />
-    <state width="1877" height="-12" key="GridCell.Tab.0.left" timestamp="1580971793121">
+    <state width="1877" height="128" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581149016712" />
+    <state width="1877" height="128" key="GridCell.Tab.0.left" timestamp="1581149016711">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="-12" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580971793121" />
-    <state width="1877" height="-12" key="GridCell.Tab.0.right" timestamp="1580971793121">
+    <state width="1877" height="128" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581149016711" />
+    <state width="1877" height="128" key="GridCell.Tab.0.right" timestamp="1581149016712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="-12" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580971793121" />
-    <state width="1877" height="-12" key="GridCell.Tab.1.bottom" timestamp="1580971793122">
+    <state width="1877" height="128" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581149016712" />
+    <state width="1877" height="128" key="GridCell.Tab.1.bottom" timestamp="1581149016712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="-12" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580971793122" />
-    <state width="1877" height="-12" key="GridCell.Tab.1.center" timestamp="1580971793122">
+    <state width="1877" height="128" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581149016712" />
+    <state width="1877" height="128" key="GridCell.Tab.1.center" timestamp="1581149016712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="-12" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580971793122" />
-    <state width="1877" height="-12" key="GridCell.Tab.1.left" timestamp="1580971793122">
+    <state width="1877" height="128" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581149016712" />
+    <state width="1877" height="128" key="GridCell.Tab.1.left" timestamp="1581149016712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="-12" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580971793122" />
-    <state width="1877" height="-12" key="GridCell.Tab.1.right" timestamp="1580971793122">
+    <state width="1877" height="128" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581149016712" />
+    <state width="1877" height="128" key="GridCell.Tab.1.right" timestamp="1581149016712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="-12" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580971793122" />
+    <state width="1877" height="128" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581149016712" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1575364906647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -224,5 +243,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="334" y="218" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1575375213732" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581145500735">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581145500735" />
   </component>
 </project>

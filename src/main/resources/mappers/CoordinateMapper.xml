@@ -2,7 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.s1mpie.gameserver.repostiory.CoordinateMapper">
     <resultMap id="Coordinate" type="Coordinate" autoMapping="true"/>
+    <resultMap id="WaterPieces" type="WaterPiece" autoMapping="true"/>
     <select id="queryCurrent" resultMap="Coordinate" parameterType="String">
         select x,y from current_coordinate where user_id=#{userId}
     </select>
+    <select id="queryWholeMap" resultMap="WaterPieces" >
+        select water_piece.*,
+               maps.x as x,
+               maps.y as y
+        from user_map left join maps on user_map.map_id = maps.id left join water_piece on maps.cate = water_piece.cate
+        where user_map.user_id=#{userId}
+        order by maps.x,maps.y
+    </select>
+    <update id="updateCurrent" >
+        update current_coordinate set x=#{x},y=#{y} where user_id=#{userId}
+    </update>
 </mapper>

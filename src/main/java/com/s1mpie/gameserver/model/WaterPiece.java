@@ -5,11 +5,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Coordinate {
+public class WaterPiece {
     private int x;
     private int y;
+    private int cate;
+    private String name;
+    private int powerCost;
+    private int buff;
+    private int ifGet;
 }

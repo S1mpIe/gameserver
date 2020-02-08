@@ -19,4 +19,17 @@ public class CoordinateController {
     public JSONObject getCurrentCoordinate(@RequestParam("userId")String userId){
         return coordinateService.getCoordinate(userId);
     }
+
+    @RequestMapping("/getPath")
+    @ResponseBody
+    public JSONObject getPath(@RequestParam("userId")String userId,@RequestParam("disX")int disX,@RequestParam("disY")int disY){
+        return coordinateService.getPath(userId, disX, disY);
+    }
+
+    @RequestMapping("/move")
+    @ResponseBody
+    public JSONObject move(@RequestParam("userId")String userId,@RequestParam("disX")int disX,@RequestParam("disY")int disY){
+        return coordinateService.move(userId, disX, disY);
+    }
+
 }

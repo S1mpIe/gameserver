@@ -8,6 +8,18 @@ spring:
     password: '!Wstly1221'
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
+  redis:
+      database: 1
+      host: 127.0.0.1
+      port: 6379
+      jedis:
+        pool:
+          max-active: 8
+          max-wait: -1
+          max-idle: 8
+      lettuce:
+        shutdown-timeout: 10000
+      password: '!Wstly1221'
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
