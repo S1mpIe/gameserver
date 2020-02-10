@@ -10,7 +10,7 @@
     </select>
     <select id="getLastTime" parameterType="String" resultMap="Hunt">
         select * from hunt
-        where user_id=#{userId}
+        where user_id=#{userId} and status='正在捕捞'
         order by begin_time;
     </select>
     <insert id="startShip">

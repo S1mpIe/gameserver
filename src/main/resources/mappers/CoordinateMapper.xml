@@ -14,6 +14,19 @@
         where user_map.user_id=#{userId}
         order by maps.x,maps.y
     </select>
+    <select id="queryPiece" resultMap="WaterPieces" >
+        select water_piece.* from water_piece
+            left join maps on maps.cate=water_piece.cate
+            left join user_map um on maps.id = um.map_id
+        where um.user_id=#{userId} and maps.x=#{x} and maps.y=#{y}
+    </select>
+    <select id="queryCurrentPiece" resultMap="WaterPieces" >
+        select water_piece.* from water_piece
+            left join maps on maps.cate=water_piece.cate
+            left join user_map um on maps.id = um.map_id
+            left join current_coordinate cc on (maps.x = cc.x and maps.y = cc.y)
+                                           where um.user_id=#{userId} and cc.user_id=#{userId}
+    </select>
     <update id="updateCurrent" >
         update current_coordinate set x=#{x},y=#{y} where user_id=#{userId}
     </update>

@@ -21,7 +21,11 @@ public class HuntController {
     public JSONObject getShipTime(@Param("userId") String userId){
         return huntService.getLastBeginTime(userId);
     }
-
+    @RequestMapping("/catch")
+    @ResponseBody
+    public JSONObject getCatch(@Param("userId")String userId){
+        return huntService.startCatch(userId);
+    }
     @RequestMapping("/start")
     @ResponseBody
     public JSONObject startShip(@Param("userId") String userId){

@@ -7,4 +7,5 @@ import org.springframework.stereotype.Component;
 public interface PowerMapper {
     Powers queryCurrent(String userId);
     int updateCurrent(String userId,int power);
+    int updateMax(String userId,int power);
 }

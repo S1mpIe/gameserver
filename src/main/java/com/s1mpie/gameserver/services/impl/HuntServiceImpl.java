@@ -3,9 +3,9 @@ package com.s1mpie.gameserver.services.impl;
 import com.alibaba.fastjson.JSONObject;
 import com.s1mpie.gameserver.model.Hunt;
 import com.s1mpie.gameserver.repostiory.HuntMapper;
+import com.s1mpie.gameserver.services.FishService;
 import com.s1mpie.gameserver.services.HuntService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
@@ -14,6 +14,8 @@ import java.sql.Timestamp;
 public class HuntServiceImpl implements HuntService {
     @Autowired
     private HuntMapper huntMapper;
+    @Autowired
+    private FishService fishService;
     @Override
     public JSONObject getLastBeginTime(String userId) {
         System.out.println(userId);
@@ -26,6 +28,11 @@ public class HuntServiceImpl implements HuntService {
             jsonObject.put("status","null");
         }
         return jsonObject;
+    }
+
+    @Override
+    public JSONObject startCatch(String userId) {
+        return fishService.catchFish(userId);
     }
 
     @Override
@@ -58,6 +65,7 @@ public class HuntServiceImpl implements HuntService {
             jsonObject.put("cause","ship has stopped...");
         }else {
             huntMapper.stopShip(userId,lastActiveTime.getHuntId());
+            fishService.goFishing(userId);
             jsonObject.put("status","ok");
         }
         return jsonObject;

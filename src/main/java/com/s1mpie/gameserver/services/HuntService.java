@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import java.sql.Timestamp;
 public interface HuntService {
     JSONObject getLastBeginTime(String userId);
+    JSONObject startCatch(String userId);
     JSONObject startShip(String userId);
     JSONObject stopShip(String userId);
 }

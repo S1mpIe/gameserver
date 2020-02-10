@@ -7,6 +7,7 @@ import com.s1mpie.gameserver.model.WaterPiece;
 import com.s1mpie.gameserver.repostiory.CoordinateMapper;
 import com.s1mpie.gameserver.repostiory.PowerMapper;
 import com.s1mpie.gameserver.services.CoordinateService;
+import com.s1mpie.gameserver.services.PowerService;
 import com.s1mpie.gameserver.utils.UniversalUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -20,6 +21,8 @@ public class CoordinateServiceImpl implements CoordinateService {
     private CoordinateMapper coordinateMapper;
     @Autowired
     private PowerMapper powerMapper;
+    @Autowired
+    private PowerService powerService;
     @Autowired
     private UniversalUtil universalUtil;
     @Autowired
@@ -71,23 +74,16 @@ public class CoordinateServiceImpl implements CoordinateService {
 
     @Override
     public JSONObject move(String userId, int disX, int disY) {
-        JSONObject jsonObject = new JSONObject();
         List<WaterPiece> range = redisTemplate.opsForList().range("path-" + userId, 0, -1);
-        Powers powers = powerMapper.queryCurrent(userId);
         int totalPower = 0;
+        int index = 0;
         for (WaterPiece waterPiece:range
              ) {
-            if (waterPiece != null){
+            if (waterPiece != null && index != 0){
                 totalPower += waterPiece.getPowerCost();
+                index ++;
             }
         }
-        if(totalPower <= powers.getCurrent()){
-            coordinateMapper.updateCurrent(userId, disX, disY);
-            powerMapper.updateCurrent(userId, powers.getCurrent() - totalPower);
-            jsonObject.put("status","success");
-        }else {
-            jsonObject.put("status","failed");
-        }
-        return jsonObject;
+        return powerService.reduceCurrentPower(userId,totalPower);
     }
 }

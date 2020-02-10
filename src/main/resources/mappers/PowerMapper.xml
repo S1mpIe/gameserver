@@ -8,4 +8,7 @@
     <update id="updateCurrent" >
         update powers set current=#{power} where user_id=#{userId}
     </update>
+    <update id="updateMax">
+        update powers set max=#{power} where user_id=#{userId}
+    </update>
 </mapper>

@@ -8,5 +8,7 @@ import org.springframework.stereotype.Component;
 public interface CoordinateMapper {
     Coordinate queryCurrent(String userId);
     WaterPiece[] queryWholeMap(String userId);
+    WaterPiece queryPiece(String userId,int x,int y);
+    WaterPiece queryCurrentPiece(String userId);
     int updateCurrent(String userId,int x,int y);
 }

@@ -27,11 +27,69 @@ public class PowerServiceImpl implements PowerService {
     }
     @Override
     public JSONObject updateMaxPower(String userId, int power) {
-        return null;
+        JSONObject jsonObject = new JSONObject();
+        int number = powerMapper.updateMax(userId, power);
+        if(number == 1){
+            jsonObject.put("status","success");
+        }else {
+            jsonObject.put("status","failed");
+        }
+        return jsonObject;
+    }
+
+    @Override
+    public JSONObject reduceMaxPower(String userId, int power) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("status","failed");
+        Powers powers = powerMapper.queryCurrent(userId);
+        if(power >= 0 && powers.getMax() >= power){
+            return updateMaxPower(userId,powers.getMax() - power);
+        }
+        return jsonObject;
+    }
+
+    @Override
+    public JSONObject increaseMaxPower(String userId, int power) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("status","failed");
+        Powers powers = powerMapper.queryCurrent(userId);
+        if(power >= 0){
+            return updateMaxPower(userId,powers.getMax() + power);
+        }
+        return jsonObject;
     }
 
     @Override
     public JSONObject updateCurrentPower(String userId, int power) {
-        return null;
+        JSONObject jsonObject = new JSONObject();
+        int i = powerMapper.updateCurrent(userId, power);
+        if(i == 1){
+            jsonObject.put("status","success");
+        }else {
+            jsonObject.put("status","failed");
+        }
+        return jsonObject;
+    }
+
+    @Override
+    public JSONObject reduceCurrentPower(String userId, int power) {
+        JSONObject jsonObject = new JSONObject();
+        Powers powers = powerMapper.queryCurrent(userId);
+        jsonObject.put("status","failed");
+        if(powers.getCurrent() >= power && power >= 0){
+            return updateCurrentPower(userId,power + powers.getCurrent());
+        }
+        return jsonObject;
+    }
+
+    @Override
+    public JSONObject increaseCurrentPower(String userId, int power) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("status","failed");
+        Powers powers = powerMapper.queryCurrent(userId);
+        if(power >= 0){
+            return updateCurrentPower(userId,powers.getCurrent() + power);
+        }
+        return jsonObject;
     }
 }
