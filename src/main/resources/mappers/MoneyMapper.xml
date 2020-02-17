@@ -5,4 +5,7 @@
     <select id="queryCurrent" resultMap="Money" parameterType="String">
         select * from money where user_id=#{userId}
     </select>
+    <update id="updateCurrent">
+        update money set current=#{number} where user_id=#{userId}
+    </update>
 </mapper>

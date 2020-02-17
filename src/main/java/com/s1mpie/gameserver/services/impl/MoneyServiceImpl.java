@@ -26,7 +26,15 @@ public class MoneyServiceImpl implements MoneyService {
 
     @Override
     public JSONObject addMoney(String userId, int money) {
-        return null;
+        Money money1 = moneyMapper.queryCurrent(userId);
+        int i = moneyMapper.updateCurrent(userId, money1.getCurrent() + money);
+        JSONObject jsonObject = new JSONObject();
+        if(i == 1){
+            jsonObject.put("status","success");
+        }else {
+            jsonObject.put("status","failed");
+        }
+        return jsonObject;
     }
 
     @Override

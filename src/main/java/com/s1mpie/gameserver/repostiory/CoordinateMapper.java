@@ -11,4 +11,5 @@ public interface CoordinateMapper {
     WaterPiece queryPiece(String userId,int x,int y);
     WaterPiece queryCurrentPiece(String userId);
     int updateCurrent(String userId,int x,int y);
+    int updateUserMap(String userId,int id);
 }

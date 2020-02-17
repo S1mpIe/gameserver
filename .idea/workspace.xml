@@ -3,24 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="cc26b278-c10a-40ea-ae51-68895adf3844" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/controller/HuntController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/controller/HuntController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/controller/ShipController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/controller/ShipController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/repostiory/CabinMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/repostiory/CoordinateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/repostiory/CoordinateMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/repostiory/PowerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/repostiory/PowerMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/CabinService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/HuntService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/HuntService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/PowerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/PowerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/ShipService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/CabinServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/repostiory/MoneyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/repostiory/MoneyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/FishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/FishService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/CoordinateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/CoordinateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/HuntServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/HuntServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/FishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/FishServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/MoneyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/MoneyServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/PowerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/PowerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/services/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/utils/UniversalUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/s1mpie/gameserver/utils/UniversalUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/CoordinateMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CoordinateMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/HuntMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/HuntMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/PowerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/PowerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/MoneyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/MoneyMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +151,13 @@
       <workItem from="1580968437698" duration="14457000" />
       <workItem from="1581088175682" duration="815000" />
       <workItem from="1581141815225" duration="9858000" />
-      <workItem from="1581318133819" duration="11164000" />
+      <workItem from="1581318133819" duration="13222000" />
+      <workItem from="1581571853398" duration="315000" />
+      <workItem from="1581659326565" duration="6956000" />
+      <workItem from="1581675793008" duration="1902000" />
+      <workItem from="1581751953351" duration="2450000" />
+      <workItem from="1581838327300" duration="150000" />
+      <workItem from="1581924278489" duration="517000" />
     </task>
     <task id="LOCAL-00001" summary="Init...">
       <created>1575365296826</created>
@@ -188,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581149748702</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Init...">
+      <created>1581330398282</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581330398283</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,50 +217,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="583" y="436" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580974658611" />
+    <state x="734" y="360" width="489" height="319" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581752012977">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="734" y="360" width="489" height="319" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1581752012977" />
     <state x="306" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581330151390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="306" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581330151390" />
-    <state x="566" y="22" key="CommitChangelistDialog2" timestamp="1581330381044">
+    <state x="566" y="22" key="CommitChangelistDialog2" timestamp="1581330395195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="566" y="22" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581330381044" />
+    <state x="566" y="22" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581330395195" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1579442887856">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579442887856" />
-    <state width="1877" height="596" key="GridCell.Tab.0.bottom" timestamp="1581330197373">
+    <state width="1877" height="213" key="GridCell.Tab.0.bottom" timestamp="1581838482473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="596" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581330197373" />
-    <state width="1877" height="596" key="GridCell.Tab.0.center" timestamp="1581330197373">
+    <state width="1877" height="213" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581838482473" />
+    <state width="1877" height="213" key="GridCell.Tab.0.center" timestamp="1581838482473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="596" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581330197373" />
-    <state width="1877" height="596" key="GridCell.Tab.0.left" timestamp="1581330197373">
+    <state width="1877" height="213" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581838482473" />
+    <state width="1877" height="213" key="GridCell.Tab.0.left" timestamp="1581838482473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="596" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581330197373" />
-    <state width="1877" height="596" key="GridCell.Tab.0.right" timestamp="1581330197373">
+    <state width="1877" height="213" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581838482473" />
+    <state width="1877" height="213" key="GridCell.Tab.0.right" timestamp="1581838482473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="596" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581330197373" />
-    <state width="1877" height="596" key="GridCell.Tab.1.bottom" timestamp="1581330197373">
+    <state width="1877" height="213" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581838482473" />
+    <state width="1877" height="119" key="GridCell.Tab.1.bottom" timestamp="1581754415751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="596" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581330197373" />
-    <state width="1877" height="596" key="GridCell.Tab.1.center" timestamp="1581330197373">
+    <state width="1877" height="119" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581754415751" />
+    <state width="1877" height="119" key="GridCell.Tab.1.center" timestamp="1581754415750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="596" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581330197373" />
-    <state width="1877" height="596" key="GridCell.Tab.1.left" timestamp="1581330197373">
+    <state width="1877" height="119" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581754415750" />
+    <state width="1877" height="119" key="GridCell.Tab.1.left" timestamp="1581754415750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="596" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581330197373" />
-    <state width="1877" height="596" key="GridCell.Tab.1.right" timestamp="1581330197373">
+    <state width="1877" height="119" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581754415750" />
+    <state width="1877" height="119" key="GridCell.Tab.1.right" timestamp="1581754415750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="596" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581330197373" />
+    <state width="1877" height="119" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581754415750" />
     <state width="220" height="539" key="HiddenNamespacesPopup" timestamp="1581326078260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -263,10 +273,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1575364906647" />
-    <state x="751" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581326407154">
+    <state x="751" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581924864166">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="751" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581326407154" />
+    <state x="751" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581924864166" />
     <state x="690" y="274" key="extract.method.dialog" timestamp="1581326489527">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -275,9 +285,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="334" y="218" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1575375213732" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581145500735">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581751982441">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581145500735" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581751982441" />
   </component>
 </project>

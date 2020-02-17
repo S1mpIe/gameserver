@@ -30,4 +30,7 @@
     <update id="updateCurrent" >
         update current_coordinate set x=#{x},y=#{y} where user_id=#{userId}
     </update>
+    <update id="updateUserMap">
+        update user_map set map_id=#{id} where user_id=#{userId}
+    </update>
 </mapper>

@@ -56,6 +56,7 @@ public class CoordinateServiceImpl implements CoordinateService {
             jsonObject.put("status","failed");
             jsonObject.put("errmsg","无法到达");
         }else{
+            int totalPower = 0;
             if(redisTemplate.hasKey("path-" + userId)){
                 redisTemplate.delete("path-" + userId);
             }
@@ -64,10 +65,14 @@ public class CoordinateServiceImpl implements CoordinateService {
             int index = 0;
             for(WaterPiece waterPiece:path){
                 if (waterPiece != null) {
+                    if (index != 0) {
+                        totalPower += waterPiece.getPowerCost();
+                    }
                     coorPath[index++] = new Coordinate(waterPiece.getX(),waterPiece.getY());
                 }
             }
             jsonObject.put("path",coorPath);
+            jsonObject.put("powerCost",totalPower);
         }
         return jsonObject;
     }
@@ -81,9 +86,13 @@ public class CoordinateServiceImpl implements CoordinateService {
              ) {
             if (waterPiece != null && index != 0){
                 totalPower += waterPiece.getPowerCost();
-                index ++;
             }
+            index ++;
         }
-        return powerService.reduceCurrentPower(userId,totalPower);
+        JSONObject jsonObject = powerService.reduceCurrentPower(userId, totalPower);
+        if(jsonObject.getString("status").equals("success")){
+            coordinateMapper.updateCurrent(userId,disX,disY);
+        }
+        return jsonObject;
     }
 }

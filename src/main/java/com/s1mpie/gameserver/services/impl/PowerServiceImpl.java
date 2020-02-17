@@ -77,7 +77,9 @@ public class PowerServiceImpl implements PowerService {
         Powers powers = powerMapper.queryCurrent(userId);
         jsonObject.put("status","failed");
         if(powers.getCurrent() >= power && power >= 0){
-            return updateCurrentPower(userId,power + powers.getCurrent());
+            return updateCurrentPower(userId,powers.getCurrent() - power);
+        }else {
+            jsonObject.put("errmsg","体力不足");
         }
         return jsonObject;
     }

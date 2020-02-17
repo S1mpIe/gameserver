@@ -6,4 +6,5 @@ import org.springframework.stereotype.Component;
 @Component
 public interface MoneyMapper {
     Money queryCurrent(String userId);
+    int updateCurrent(String userId,int number);
 }

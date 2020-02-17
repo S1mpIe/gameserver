@@ -9,7 +9,7 @@ import java.util.*;
 @Component
 public class UniversalUtil {
     public WaterPiece[] getPath(WaterPiece[] waterMap,Coordinate coordinate,String userId,int disX,int disY){
-        if (coordinate == null || (disX == 2 && disY == 3) || (disX == 3 && (disY == 2 || disY == 3 || disY == 4)) || (disX == 4 && disY == 3) ){
+        if (coordinate == null || (disX == 3 && disY == 3)){
             return null;
         }
         int x = coordinate.getX();

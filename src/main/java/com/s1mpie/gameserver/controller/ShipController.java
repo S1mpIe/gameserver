@@ -1,5 +1,6 @@
 package com.s1mpie.gameserver.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.s1mpie.gameserver.services.FishService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/ship")
+@RequestMapping("/inventory")
 public class ShipController {
     @Autowired
     private FishService fishService;
@@ -24,5 +25,21 @@ public class ShipController {
     @ResponseBody
     public JSONObject getCabinInven(@RequestParam("userId")String userId){
         return fishService.getCabinInventory(userId);
+    }
+
+    @RequestMapping("/storage")
+    @ResponseBody
+    public JSONObject cabinToInven(@RequestParam("userId")String userId,@RequestParam(value = "fishId",required = false)Integer fishId){
+        if (fishId == null){
+           return fishService.moveCabinToWare(userId);
+        }else {
+            return fishService.moveCabinToWare(userId,fishId);
+        }
+    }
+
+    @RequestMapping("/sell")
+    @ResponseBody
+    public JSONObject wareSell(@RequestParam("userId")String userId,@RequestParam("fishId")int fishId,@RequestParam("number")int number){
+        return fishService.sellWareInventory(userId, fishId, number);
     }
 }
