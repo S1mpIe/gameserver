@@ -20,4 +20,33 @@ public class InitController {
     public JSONObject getMap(@RequestParam("userId")String userId){
         return initService.getMap(userId);
     }
+
+    @RequestMapping("/sign")
+    @ResponseBody
+    public JSONObject getNewPower(@RequestParam("userId")String userId){
+        return initService.signIn(userId);
+    }
+
+    @RequestMapping("/accessiblePower")
+    @ResponseBody
+    public JSONObject getAccessiblePower(@RequestParam("userId")String userId){
+        return initService.getAccessiblePower(userId);
+    }
+
+    @RequestMapping("/obtain")
+    @ResponseBody
+    public JSONObject obtainPower(@RequestParam("userId")String userId,@RequestParam("powerName")String name){
+        return initService.obtainPower(userId, name);
+    }
+
+    @RequestMapping("/addTrip")
+    @ResponseBody
+    public JSONObject addNewTrip(@RequestParam("userId")String userId){
+        return initService.addRandomTrip(userId);
+    }
+    @RequestMapping("/addPay")
+    @ResponseBody
+    public JSONObject addNewPay(@RequestParam("userId")String userId){
+        return initService.addRandomPay(userId);
+    }
 }
