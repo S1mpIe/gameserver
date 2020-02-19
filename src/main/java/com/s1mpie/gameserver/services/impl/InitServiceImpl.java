@@ -44,7 +44,8 @@ public class InitServiceImpl implements InitService {
             if(today.getDay() - day >= 1){
                 jsonObject.put("status","success");
                 jsonObject.put("power",4);
-                powerService.increaseCurrentPower(userId,4);
+                redisTemplate.opsForHash().put(sign,userId,new Date(System.currentTimeMillis()));
+                redisTemplate.opsForList().leftPushAll("accessiblePower-" + userId,new AccessiblePower("签到",4,new Date(System.currentTimeMillis())));
             }else {
                 jsonObject.put("status","failed");
             }
@@ -79,7 +80,9 @@ public class InitServiceImpl implements InitService {
         if (flag){
             jsonObject.put("status","success");
             redisTemplate.delete("accessiblePower-" + userId);
-            redisTemplate.opsForList().leftPushAll("accessiblePower-" + userId,range);
+            if (!range.isEmpty()) {
+                redisTemplate.opsForList().leftPushAll("accessiblePower-" + userId,range);
+            }
         }else {
             jsonObject.put("status","failed");
             jsonObject.put("errmsg","未找到对应行动力");

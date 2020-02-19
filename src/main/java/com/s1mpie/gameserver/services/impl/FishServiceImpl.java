@@ -56,7 +56,7 @@ public class FishServiceImpl implements FishService {
                         midPro += pro;
                     }
                 }
-                if (!ans.getName().equals("无")) {
+                if (ans.getName() != null && !ans.getName().equals("无")) {
                     ans.setProbability(0);;
                     redisTemplate.opsForList().leftPush("cabin-" + userId,ans);
                     jsonObject.put("fish",ans);
