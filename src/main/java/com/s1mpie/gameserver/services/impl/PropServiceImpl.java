@@ -108,6 +108,9 @@ public class PropServiceImpl implements PropService {
     @Override
     public JSONObject getAllBuff(String userId) {
         Buff buff = (Buff) redisTemplate.opsForHash().get("Buff", userId);
+        if (buff.getBirthTime().getTime()/1000 + 43200 * buff.getLastTime() < new Date(System.currentTimeMillis()).getTime()/1000){
+            buff = null;
+        }
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("buff",buff);
         return jsonObject;
