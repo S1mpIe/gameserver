@@ -1,6 +1,7 @@
 package com.s1mpie.gameserver.services.impl;
 
 import com.alibaba.fastjson.JSONObject;
+import com.s1mpie.gameserver.model.Buff;
 import com.s1mpie.gameserver.model.Coordinate;
 import com.s1mpie.gameserver.model.Fish;
 import com.s1mpie.gameserver.model.WaterPiece;
@@ -9,11 +10,13 @@ import com.s1mpie.gameserver.repostiory.FishMapper;
 import com.s1mpie.gameserver.services.FishService;
 import com.s1mpie.gameserver.services.MoneyService;
 import com.s1mpie.gameserver.services.PowerService;
+import com.s1mpie.gameserver.services.PropService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
@@ -30,6 +33,8 @@ public class FishServiceImpl implements FishService {
     private CoordinateMapper coordinateMapper;
     @Autowired
     private MoneyService moneyService;
+    @Autowired
+    private PropService propService;
     @Override
     public JSONObject catchFish(String userId) {
         JSONObject jsonObject = new JSONObject();
@@ -111,6 +116,7 @@ public class FishServiceImpl implements FishService {
         Fish[] fishes = fishMapper.queryWareHouse(userId);
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("warehouse",fishes);
+        jsonObject.put("propArr",propService.getBagInventory(userId).get("proArr"));
         return jsonObject;
     }
 
@@ -220,7 +226,13 @@ public class FishServiceImpl implements FishService {
             jsonObject.put("status","未到达指定位置");
         }else {
             fishMapper.updateWareHouse(userId,fishId,fish.getNumber() - number);
-            jsonObject = moneyService.addMoney(userId, (int) (fish.getPrice() * number));
+            Buff buff = (Buff) redisTemplate.opsForHash().get("Buff", userId);
+            int addMoney = (int) (fish.getPrice() * number);
+            Date date = new Date(System.currentTimeMillis());
+            if (buff.getTarget().equals("money") && (buff.getBirthTime().getTime()/1000 + buff.getLastTime() * 43200 >= date.getTime()/1000)){
+                addMoney *= (1 + buff.getNumber());
+            }
+            jsonObject = moneyService.addMoney(userId, addMoney);
         }
         if (jsonObject.getString("status").equals("success")){
             coordinateMapper.updateUserMap(userId,ThreadLocalRandom.current().nextInt(1,10));

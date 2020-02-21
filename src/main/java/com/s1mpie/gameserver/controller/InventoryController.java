@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/inventory")
-public class ShipController {
+public class InventoryController {
     @Autowired
     private FishService fishService;
 

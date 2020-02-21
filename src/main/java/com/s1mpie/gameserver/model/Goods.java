@@ -10,6 +10,7 @@ import lombok.*;
 public class Goods {
     private int id;
     private String name;
+    private int price;
     private int number;
     private String introduce;
     private String target;
